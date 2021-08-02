@@ -3,19 +3,28 @@ return array(
 
 	'CallMeDEBUG' => 1, // дебаг сообщения в логе: 1 - пишем, 0 - не пишем
 	'tech' => 'SIP', 
-	'authToken' => 'type_your_token_here', //токен авторизации битрикса
-	'bitrixApiUrl' => 'https://_type_your_url_here', //url к api битрикса (входящий вебхук)
-	'extentions' => array('888999'), // список внешних номеров, через запятую
-	'context' => 'dial_out', //исходящий контекст для оригинации звонка
+	'authToken' => '', //токен авторизации битрикса
+        'bitrixApiUrl' => '', //url к api битрикса (входящий вебхук)
+	'extentions' => array(), // список внешних номеров, через запятую
+	'context' => 'DefaultOutgoingRule', //исходящий контекст для оригинации звонка
 	'asterisk' => array( // настройки для подключения к астериску
-		    'host' => '10.100.111.249',
+		    'host' => 'localhost',
 		    'scheme' => 'tcp://',
 		    'port' => 5038,
-		    'username' => 'callme',
-		    'secret' => 'Lp1238_f23r-3rygJ',
+		    'username' => '',
+		    'secret' => '',
 		    'connect_timeout' => 10000,
 		    'read_timeout' => 10000
 		),
-	'listener_timeout' => 300, //скорость обработки событий от asterisk
+	'listener_timeout' => 30000, //скорость обработки событий от asterisk
+    'bx24' => array(
+        'default_user_number' => '405',
+        
+
+    ),
+    'bx24_crm_source' => array(
+        'default_crm_source' => '1'
+    ),
+    'user_show_cards' => array( ), //список внутренних номеров, через запятую
 
 );
